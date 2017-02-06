@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		669B18F8E79B9DCE45FBE24A /* Pods_FoosballTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBFC42409E2592EA80ED278 /* Pods_FoosballTracker.framework */; };
+		A35ECD311E48D95E002E6746 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A35ECD301E48D95E002E6746 /* GoogleService-Info.plist */; };
+		A35ECD331E48E08C002E6746 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35ECD321E48E08C002E6746 /* APIClient.swift */; };
+		A35ECD351E48E3A2002E6746 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35ECD341E48E3A2002E6746 /* Player.swift */; };
+		A35ECD371E48F68F002E6746 /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35ECD361E48F68F002E6746 /* PlayerDetailViewController.swift */; };
+		A35ECD391E48FD58002E6746 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35ECD381E48FD58002E6746 /* GameViewController.swift */; };
+		A377F4F71DC941DF00907CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F4F61DC941DF00907CB3 /* AppDelegate.swift */; };
+		A377F4F91DC941DF00907CB3 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F4F81DC941DF00907CB3 /* NewGameViewController.swift */; };
+		A377F4FB1DC941DF00907CB3 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F4FA1DC941DF00907CB3 /* PlayersViewController.swift */; };
+		A377F4FE1DC941DF00907CB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A377F4FC1DC941DF00907CB3 /* Main.storyboard */; };
+		A377F5001DC941DF00907CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A377F4FF1DC941DF00907CB3 /* Assets.xcassets */; };
+		A377F5031DC941DF00907CB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A377F5011DC941DF00907CB3 /* LaunchScreen.storyboard */; };
+		A377F5181DC946DC00907CB3 /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F50E1DC946DC00907CB3 /* DPDConstants.swift */; };
+		A377F5191DC946DC00907CB3 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F50F1DC946DC00907CB3 /* DPDKeyboardListener.swift */; };
+		A377F51A1DC946DC00907CB3 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F5101DC946DC00907CB3 /* DPDUIView+Extension.swift */; };
+		A377F51B1DC946DC00907CB3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A377F5111DC946DC00907CB3 /* Info.plist */; };
+		A377F51C1DC946DC00907CB3 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A377F5131DC946DC00907CB3 /* DropDownCell.xib */; };
+		A377F51D1DC946DC00907CB3 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F5151DC946DC00907CB3 /* DropDown+Appearance.swift */; };
+		A377F51E1DC946DC00907CB3 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F5161DC946DC00907CB3 /* DropDown.swift */; };
+		A377F51F1DC946DC00907CB3 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F5171DC946DC00907CB3 /* DropDownCell.swift */; };
+		A377F5221DC9545000907CB3 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F5201DC9545000907CB3 /* PlayerTableViewCell.swift */; };
+		A377F5231DC9545000907CB3 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A377F5211DC9545000907CB3 /* PlayerTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7BC449E515F61A76BD66832E /* Pods-FoosballTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoosballTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoosballTracker/Pods-FoosballTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		8EBFC42409E2592EA80ED278 /* Pods_FoosballTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoosballTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A35ECD301E48D95E002E6746 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Vendor/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A35ECD321E48E08C002E6746 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A35ECD341E48E3A2002E6746 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A35ECD361E48F68F002E6746 /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
+		A35ECD381E48FD58002E6746 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A377F4F31DC941DF00907CB3 /* FoosballTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoosballTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A377F4F61DC941DF00907CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A377F4F81DC941DF00907CB3 /* NewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
+		A377F4FA1DC941DF00907CB3 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		A377F4FD1DC941DF00907CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A377F4FF1DC941DF00907CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A377F5021DC941DF00907CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A377F5041DC941DF00907CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A377F50C1DC946DC00907CB3 /* DropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDown.h; sourceTree = "<group>"; };
+		A377F50E1DC946DC00907CB3 /* DPDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDConstants.swift; sourceTree = "<group>"; };
+		A377F50F1DC946DC00907CB3 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		A377F5101DC946DC00907CB3 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		A377F5111DC946DC00907CB3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A377F5131DC946DC00907CB3 /* DropDownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownCell.xib; sourceTree = "<group>"; };
+		A377F5151DC946DC00907CB3 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		A377F5161DC946DC00907CB3 /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
+		A377F5171DC946DC00907CB3 /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
+		A377F5201DC9545000907CB3 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		A377F5211DC9545000907CB3 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
+		B3F9798B982C9BC6AA01C625 /* Pods-FoosballTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoosballTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoosballTracker/Pods-FoosballTracker.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A377F4F01DC941DE00907CB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669B18F8E79B9DCE45FBE24A /* Pods_FoosballTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54ABF69BACBAEC03FFA49473 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BC449E515F61A76BD66832E /* Pods-FoosballTracker.debug.xcconfig */,
+				B3F9798B982C9BC6AA01C625 /* Pods-FoosballTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A377F4EA1DC941DE00907CB3 = {
+			isa = PBXGroup;
+			children = (
+				A377F4F51DC941DF00907CB3 /* FoosballTracker */,
+				A377F4F41DC941DF00907CB3 /* Products */,
+				54ABF69BACBAEC03FFA49473 /* Pods */,
+				AAA8C6165095E29535465D04 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A377F4F41DC941DF00907CB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A377F4F31DC941DF00907CB3 /* FoosballTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A377F4F51DC941DF00907CB3 /* FoosballTracker */ = {
+			isa = PBXGroup;
+			children = (
+				A377F50A1DC946C900907CB3 /* Vendor */,
+				A35ECD301E48D95E002E6746 /* GoogleService-Info.plist */,
+				A377F4F61DC941DF00907CB3 /* AppDelegate.swift */,
+				A377F4F81DC941DF00907CB3 /* NewGameViewController.swift */,
+				A377F4FA1DC941DF00907CB3 /* PlayersViewController.swift */,
+				A377F4FC1DC941DF00907CB3 /* Main.storyboard */,
+				A377F4FF1DC941DF00907CB3 /* Assets.xcassets */,
+				A377F5011DC941DF00907CB3 /* LaunchScreen.storyboard */,
+				A377F5041DC941DF00907CB3 /* Info.plist */,
+				A377F5201DC9545000907CB3 /* PlayerTableViewCell.swift */,
+				A377F5211DC9545000907CB3 /* PlayerTableViewCell.xib */,
+				A35ECD321E48E08C002E6746 /* APIClient.swift */,
+				A35ECD341E48E3A2002E6746 /* Player.swift */,
+				A35ECD361E48F68F002E6746 /* PlayerDetailViewController.swift */,
+				A35ECD381E48FD58002E6746 /* GameViewController.swift */,
+			);
+			path = FoosballTracker;
+			sourceTree = "<group>";
+		};
+		A377F50A1DC946C900907CB3 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A377F50B1DC946DC00907CB3 /* DropDown */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		A377F50B1DC946DC00907CB3 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				A377F50C1DC946DC00907CB3 /* DropDown.h */,
+				A377F50D1DC946DC00907CB3 /* helpers */,
+				A377F5111DC946DC00907CB3 /* Info.plist */,
+				A377F5121DC946DC00907CB3 /* resources */,
+				A377F5141DC946DC00907CB3 /* src */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		A377F50D1DC946DC00907CB3 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A377F50E1DC946DC00907CB3 /* DPDConstants.swift */,
+				A377F50F1DC946DC00907CB3 /* DPDKeyboardListener.swift */,
+				A377F5101DC946DC00907CB3 /* DPDUIView+Extension.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		A377F5121DC946DC00907CB3 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				A377F5131DC946DC00907CB3 /* DropDownCell.xib */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		A377F5141DC946DC00907CB3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A377F5151DC946DC00907CB3 /* DropDown+Appearance.swift */,
+				A377F5161DC946DC00907CB3 /* DropDown.swift */,
+				A377F5171DC946DC00907CB3 /* DropDownCell.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AAA8C6165095E29535465D04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EBFC42409E2592EA80ED278 /* Pods_FoosballTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A377F4F21DC941DE00907CB3 /* FoosballTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A377F5071DC941DF00907CB3 /* Build configuration list for PBXNativeTarget "FoosballTracker" */;
+			buildPhases = (
+				E9C83DAF54C41CD2AAAF8463 /* [CP] Check Pods Manifest.lock */,
+				A377F4EF1DC941DE00907CB3 /* Sources */,
+				A377F4F01DC941DE00907CB3 /* Frameworks */,
+				A377F4F11DC941DE00907CB3 /* Resources */,
+				B0556E4FA2A713C57E9ACD52 /* [CP] Embed Pods Frameworks */,
+				FC4281A2AFBD51C8FA9DEDBE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoosballTracker;
+			productName = "Foosball Tracker";
+			productReference = A377F4F31DC941DF00907CB3 /* FoosballTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A377F4EB1DC941DE00907CB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = codymace;
+				TargetAttributes = {
+					A377F4F21DC941DE00907CB3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NE2625R7RX;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A377F4EE1DC941DE00907CB3 /* Build configuration list for PBXProject "FoosballTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A377F4EA1DC941DE00907CB3;
+			productRefGroup = A377F4F41DC941DF00907CB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A377F4F21DC941DE00907CB3 /* FoosballTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A377F4F11DC941DE00907CB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A377F51B1DC946DC00907CB3 /* Info.plist in Resources */,
+				A377F5031DC941DF00907CB3 /* LaunchScreen.storyboard in Resources */,
+				A377F5231DC9545000907CB3 /* PlayerTableViewCell.xib in Resources */,
+				A35ECD311E48D95E002E6746 /* GoogleService-Info.plist in Resources */,
+				A377F5001DC941DF00907CB3 /* Assets.xcassets in Resources */,
+				A377F51C1DC946DC00907CB3 /* DropDownCell.xib in Resources */,
+				A377F4FE1DC941DF00907CB3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B0556E4FA2A713C57E9ACD52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoosballTracker/Pods-FoosballTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9C83DAF54C41CD2AAAF8463 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC4281A2AFBD51C8FA9DEDBE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoosballTracker/Pods-FoosballTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A377F4EF1DC941DE00907CB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A35ECD391E48FD58002E6746 /* GameViewController.swift in Sources */,
+				A377F4FB1DC941DF00907CB3 /* PlayersViewController.swift in Sources */,
+				A377F4F71DC941DF00907CB3 /* AppDelegate.swift in Sources */,
+				A377F5221DC9545000907CB3 /* PlayerTableViewCell.swift in Sources */,
+				A377F5181DC946DC00907CB3 /* DPDConstants.swift in Sources */,
+				A35ECD351E48E3A2002E6746 /* Player.swift in Sources */,
+				A377F51D1DC946DC00907CB3 /* DropDown+Appearance.swift in Sources */,
+				A35ECD331E48E08C002E6746 /* APIClient.swift in Sources */,
+				A377F51F1DC946DC00907CB3 /* DropDownCell.swift in Sources */,
+				A377F51A1DC946DC00907CB3 /* DPDUIView+Extension.swift in Sources */,
+				A377F5191DC946DC00907CB3 /* DPDKeyboardListener.swift in Sources */,
+				A35ECD371E48F68F002E6746 /* PlayerDetailViewController.swift in Sources */,
+				A377F51E1DC946DC00907CB3 /* DropDown.swift in Sources */,
+				A377F4F91DC941DF00907CB3 /* NewGameViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A377F4FC1DC941DF00907CB3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A377F4FD1DC941DF00907CB3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A377F5011DC941DF00907CB3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A377F5021DC941DF00907CB3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A377F5051DC941DF00907CB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A377F5061DC941DF00907CB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A377F5081DC941DF00907CB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BC449E515F61A76BD66832E /* Pods-FoosballTracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NE2625R7RX;
+				INFOPLIST_FILE = FoosballTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codymace.Foosball-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A377F5091DC941DF00907CB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F9798B982C9BC6AA01C625 /* Pods-FoosballTracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NE2625R7RX;
+				INFOPLIST_FILE = FoosballTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codymace.Foosball-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A377F4EE1DC941DE00907CB3 /* Build configuration list for PBXProject "FoosballTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A377F5051DC941DF00907CB3 /* Debug */,
+				A377F5061DC941DF00907CB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A377F5071DC941DF00907CB3 /* Build configuration list for PBXNativeTarget "FoosballTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A377F5081DC941DF00907CB3 /* Debug */,
+				A377F5091DC941DF00907CB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A377F4EB1DC941DE00907CB3 /* Project object */;
+}
