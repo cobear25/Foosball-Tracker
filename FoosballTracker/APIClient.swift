@@ -37,9 +37,11 @@ class APIClient {
                     let blackOff = playerDict["blackOffWins"] as? Int ?? 0
                     let redDef = playerDict["redDefWins"] as? Int ?? 0
                     let redOff = playerDict["redOffWins"] as? Int ?? 0
+                    let redSolo = playerDict["redSoloWins"] as? Int ?? 0
+                    let blackSolo = playerDict["blackSoloWins"] as? Int ?? 0
                     let points = playerDict["points"] as? Int ?? 0
                     let games = playerDict["games"] as? Int ?? 0
-                    let playerDictionary: NSDictionary = ["name": playerName, "blackDef": blackDef, "blackOff": blackOff, "redDef": redDef, "redOff": redOff, "points": points, "games": games]
+                    let playerDictionary: NSDictionary = ["name": playerName, "blackDef": blackDef, "blackOff": blackOff, "redDef": redDef, "redOff": redOff, "redSolo": redSolo, "blackSolo": blackSolo, "points": points, "games": games]
                     let player = Player.initWithJson(json: playerDictionary)
                     players.append(player)
                 }
@@ -52,7 +54,7 @@ class APIClient {
     }
 
     func createPlayer(name: String, success: @escaping(Bool) -> Void) {
-        ref.child("tables").child("rocketmade").child("players").child(name).setValue(["blackDefWins": 0, "blackOffWins": 0, "redDefWins": 0, "redOffWins": 0, "points": 0, "games": 0])
+        ref.child("tables").child("rocketmade").child("players").child(name).setValue(["blackDefWins": 0, "blackOffWins": 0, "redDefWins": 0, "redOffWins": 0, "redSoloWins": 0, "blackSoloWins": 0, "points": 0, "games": 0])
         getPlayers(success: { (players) in
             success(true)
         }) { (err) in
@@ -95,11 +97,21 @@ class APIClient {
             default:
                 break
             }
-            ref.child("tables").child("rocketmade").child("players").child(player.name!).child("games").setValue(player.games + 1)
-
-            ref.child("tables").child("rocketmade").child("players").child(player.name!).child(pos).setValue(wins)
 
             ref.child("tables").child("rocketmade").child("players").child(player.name!).child("points").setValue(player.points)
+
+            ref.child("tables").child("rocketmade").child("players").child(player.name!).child("games").setValue(player.games + 1)
+
+            if players.count == 2 {
+                if (pos == "redDefWins" || pos == "redOffWins") && winner == "red" {
+                    ref.child("tables").child("rocketmade").child("players").child(player.name!).child("redSoloWins").setValue(player.redSoloWins + 1)
+                } else if (pos == "blackDefWins" || pos == "blackOffWins") && winner == "black" {
+                    ref.child("tables").child("rocketmade").child("players").child(player.name!).child("blackSoloWins").setValue(player.blackSoloWins + 1)
+                }
+            } else {
+                ref.child("tables").child("rocketmade").child("players").child(player.name!).child(pos).setValue(wins)
+            }
+
         }
 
         ref.child("tables").child("rocketmade").observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in

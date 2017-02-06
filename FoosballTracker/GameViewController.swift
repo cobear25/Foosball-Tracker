@@ -10,6 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var black4Button: UIButton!
     @IBOutlet weak var black3Button: UIButton!
     @IBOutlet weak var black2Button: UIButton!
@@ -121,6 +122,22 @@ class GameViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        redScore = 0
+        blackScore = 0
+        players = []
+        r1Points = 0
+        r2Points = 0
+        r3Points = 0
+        r4Points = 0
+        b1Points = 0
+        b2Points = 0
+        b3Points = 0
+        b4Points = 0
+        positions = []
+        for button in buttons {
+            button.isHidden = true
+        }
+        finishButton.isHidden = false
     }
 
     @IBAction func playerButtonTapped(_ sender: UIButton) {

@@ -14,6 +14,8 @@ class Player: NSObject {
     var blackOffWins: Int = 0
     var redDefWins: Int = 0
     var redOffWins: Int = 0
+    var redSoloWins: Int = 0
+    var blackSoloWins: Int = 0
     var games: Int = 0
     var points: Int = 0
     var totalWins: Int = 0
@@ -25,10 +27,12 @@ class Player: NSObject {
         player.blackOffWins = json["blackOff"] as! Int
         player.redDefWins = json["redDef"] as! Int
         player.redOffWins = json["redOff"] as! Int
+        player.redSoloWins = json["redSolo"] as! Int
+        player.blackSoloWins = json["blackSolo"] as! Int
         player.games = json["games"] as! Int
         player.points = json["points"] as! Int
 
-        player.totalWins = player.blackOffWins + player.blackDefWins + player.redOffWins + player.redDefWins
+        player.totalWins = player.blackOffWins + player.blackDefWins + player.redOffWins + player.redDefWins + player.redSoloWins + player.blackSoloWins
         player.losses = player.games - player.totalWins
         return player
     }

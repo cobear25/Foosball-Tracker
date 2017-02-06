@@ -59,6 +59,30 @@ class NewGameViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.players = []
+        APIClient.sharedInstance.getPlayers(success: { (players) in
+            self.playerNames = []
+            self.playerNames.append("None")
+            for player in players {
+                self.playerNames.append(player.name ?? "")
+            }
+
+            self.dropDowns = [self.playerOneDropDown, self.playerTwoDropDown, self.playerThreeDropDown, self.playerFourDropDown, self.playerFiveDropDown, self.playerSixDropDown, self.playerSevenDropDown, self.playerEightDropDown]
+            for dd in self.dropDowns {
+                dd.dataSource = self.playerNames
+            }
+            self.players = players
+        }) { (err) in
+            print(err)
+        }
+        r1 = nil
+        r2 = nil
+        r3 = nil
+        r4 = nil
+        b1 = nil
+        b2 = nil
+        b3 = nil
+        b4 = nil
         for button in playerButtons {
             button.setTitle("None", for: .normal)
         }
@@ -119,24 +143,57 @@ class NewGameViewController: UIViewController {
         dropDown.show()
         dropDown.selectionAction = { [unowned self] (index, item) in
             sender.setTitle(item, for: .normal)
-            if index > 0 && self.players.count > 0 { // so that "None" doesn't count as a person
+            let none = index <= 0
+            if self.players.count > 0 { // so that "None" doesn't count as a person
                 switch sender.tag {
                 case 1:
-                    self.r1 = self.players[index - 1]
+                    if none {
+                        self.r1 = nil
+                    } else {
+                        self.r1 = self.players[index - 1]
+                    }
                 case 2:
-                    self.r2 = self.players[index - 1]
+                    if none {
+                        self.r2 = nil
+                    } else {
+                        self.r2 = self.players[index - 1]
+                    }
                 case 3:
-                    self.r3 = self.players[index - 1]
+                    if none {
+                        self.r3 = nil
+                    } else {
+                        self.r3 = self.players[index - 1]
+                    }
                 case 4:
-                    self.r4 = self.players[index - 1]
+                    if none {
+                        self.r4 = nil
+                    } else {
+                        self.r4 = self.players[index - 1]
+                    }
                 case 5:
-                    self.b1 = self.players[index - 1]
+                    if none {
+                        self.b1 = nil
+                    } else {
+                        self.b1 = self.players[index - 1]
+                    }
                 case 6:
-                    self.b2 = self.players[index - 1]
+                    if none {
+                        self.b2 = nil
+                    } else {
+                        self.b2 = self.players[index - 1]
+                    }
                 case 7:
-                    self.b3 = self.players[index - 1]
+                    if none {
+                        self.b3 = nil
+                    } else {
+                        self.b3 = self.players[index - 1]
+                    }
                 case 8:
-                    self.b4 = self.players[index - 1]
+                    if none {
+                        self.b4 = nil
+                    } else {
+                        self.b4 = self.players[index - 1]
+                    }
                 default:
                     break
                 }

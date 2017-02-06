@@ -10,6 +10,9 @@ import UIKit
 
 class PlayerDetailViewController: UIViewController {
 
+    @IBOutlet weak var redSoloWins: UILabel!
+    @IBOutlet weak var blackSoloLabel: UILabel!
+    @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var bestColorLabel: UILabel!
     @IBOutlet weak var bestLabel: UILabel!
     @IBOutlet weak var redOffLabel: UILabel!
@@ -25,6 +28,8 @@ class PlayerDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        playerNameLabel.text = "\(player.name!)"
+
         gamesPlayedLabel.text = "\(player.games)"
         gamesWonLabel.text = "\(player.totalWins)"
         gamesLostLabel.text = "\(player.losses)"
@@ -35,6 +40,9 @@ class PlayerDetailViewController: UIViewController {
         redDefLabel.text = "\(player.redDefWins)"
         redOffLabel.text = "\(player.redOffWins)"
 
+        blackSoloLabel.text = "\(player.blackSoloWins)"
+        redSoloWins.text = "\(player.redSoloWins)"
+
         if player.blackOffWins + player.redOffWins > player.blackDefWins + player.redDefWins {
             bestLabel.text = "Offense"
         } else if player.blackOffWins + player.redOffWins == player.blackDefWins + player.redDefWins {
@@ -43,9 +51,9 @@ class PlayerDetailViewController: UIViewController {
             bestLabel.text = "Defense"
         }
 
-        if player.blackOffWins + player.blackDefWins > player.redDefWins + player.redOffWins {
+        if player.blackOffWins + player.blackDefWins + player.blackSoloWins > player.redDefWins + player.redOffWins + player.redSoloWins {
             bestColorLabel.text = "Black"
-        } else if player.blackOffWins + player.blackDefWins == player.redOffWins + player.redDefWins {
+        } else if player.blackOffWins + player.blackDefWins + player.blackSoloWins == player.redOffWins + player.redDefWins + player.redSoloWins {
             bestColorLabel.text = "Any"
         } else {
             bestColorLabel.text = "Red"
