@@ -217,8 +217,13 @@ class GameViewController: UIViewController {
         if let _ = p4Black {
             points.append(b4Points)
         }
+
+        for (index, player) in self.players.enumerated() {
+            player.points += points[index]
+            player.tempPosition = positions[index]
+        }
         
-        APIClient.sharedInstance.finishGame(players: players, points: points, positions: positions, winner: winner)
+        APIClient.sharedInstance.finishGame(players: players, winner: winner)
         dismiss(animated: true, completion: nil)
     }
 }

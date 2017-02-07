@@ -15,6 +15,11 @@ class APIClient {
     var ref: FIRDatabaseReference!
     var storageRef: FIRStorageReference!
     var user: FIRUser?
+    #if DEBUG
+    var table = "dev"
+    #else
+    var table = "rocketmade"
+    #endif
 
     var players: [Player] = []
 
@@ -27,7 +32,7 @@ class APIClient {
     }
 
     func getPlayers(success: @escaping ([Player]) -> Void, failure: @escaping (Error) -> Void) {
-        ref.child("tables").child("rocketmade").child("players").observe(FIRDataEventType.value, with: { (snapshot) in
+        ref.child("tables").child(table).child("players").observe(FIRDataEventType.value, with: { (snapshot) in
             if let value = snapshot.value as? NSDictionary {
                 var players: [Player] = []
                 for (key, val) in value {
@@ -54,18 +59,18 @@ class APIClient {
     }
 
     func createPlayer(name: String, success: @escaping(Bool) -> Void) {
-        ref.child("tables").child("rocketmade").child("players").child(name).setValue(["blackDefWins": 0, "blackOffWins": 0, "redDefWins": 0, "redOffWins": 0, "redSoloWins": 0, "blackSoloWins": 0, "points": 0, "games": 0])
+        ref.child("tables").child(table).child("players").child(name).setValue(["blackDefWins": 0, "blackOffWins": 0, "redDefWins": 0, "redOffWins": 0, "redSoloWins": 0, "blackSoloWins": 0, "points": 0, "games": 0])
         getPlayers(success: { (players) in
             success(true)
         }) { (err) in
         }
     }
 
-    func finishGame(players: [Player], points: [Int], positions: [Int], winner: String) {
+    func finishGame(players: [Player], winner: String) {
         for (index, player) in players.enumerated() {
             var pos = ""
             var wins = 0
-            switch positions[index] {
+            switch player.tempPosition {
             case 1:
                 if winner == "red" {
                     wins = player.redDefWins + 1
@@ -98,35 +103,35 @@ class APIClient {
                 break
             }
 
-            ref.child("tables").child("rocketmade").child("players").child(player.name!).child("points").setValue(points[index])
+            ref.child("tables").child(table).child("players").child(player.name!).child("points").setValue(player.points)
 
-            ref.child("tables").child("rocketmade").child("players").child(player.name!).child("games").setValue(player.games + 1)
+            ref.child("tables").child(table).child("players").child(player.name!).child("games").setValue(player.games + 1)
 
             if players.count == 2 {
                 if (pos == "redDefWins" || pos == "redOffWins") && winner == "red" {
-                    ref.child("tables").child("rocketmade").child("players").child(player.name!).child("redSoloWins").setValue(player.redSoloWins + 1)
+                    ref.child("tables").child(table).child("players").child(player.name!).child("redSoloWins").setValue(player.redSoloWins + 1)
                 } else if (pos == "blackDefWins" || pos == "blackOffWins") && winner == "black" {
-                    ref.child("tables").child("rocketmade").child("players").child(player.name!).child("blackSoloWins").setValue(player.blackSoloWins + 1)
+                    ref.child("tables").child(table).child("players").child(player.name!).child("blackSoloWins").setValue(player.blackSoloWins + 1)
                 }
             } else {
-                ref.child("tables").child("rocketmade").child("players").child(player.name!).child(pos).setValue(wins)
+                ref.child("tables").child(table).child("players").child(player.name!).child(pos).setValue(wins)
             }
 
         }
 
-        ref.child("tables").child("rocketmade").observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
+        ref.child("tables").child(table).observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
             if let value = snapshot.value as? NSDictionary {
                 if let games = value["games"] as? Int {
-                    self.ref.child("tables").child("rocketmade").child("games").setValue(games + 1)
+                    self.ref.child("tables").child(self.table).child("games").setValue(games + 1)
                 }
                 if winner != "tie" {
                     if winner == "black" {
                         if let blackWins = value["blackWins"] as? Int {
-                            self.ref.child("tables").child("rocketmade").child("blackWins").setValue(blackWins + 1)
+                            self.ref.child("tables").child(self.table).child("blackWins").setValue(blackWins + 1)
                         }
                     } else {
                         if let redWins = value["redWins"] as? Int {
-                            self.ref.child("tables").child("rocketmade").child("redWins").setValue(redWins + 1)
+                            self.ref.child("tables").child(self.table).child("redWins").setValue(redWins + 1)
                         }
                     }
                 }
