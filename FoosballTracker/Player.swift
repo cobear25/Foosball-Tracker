@@ -20,6 +20,7 @@ class Player: NSObject {
     var points: Int = 0
     var totalWins: Int = 0
     var losses: Int = 0
+
     class func initWithJson(json: NSDictionary) -> Player {
         let player = Player()
         player.name = json["name"] as? String

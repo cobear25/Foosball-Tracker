@@ -98,7 +98,7 @@ class APIClient {
                 break
             }
 
-            ref.child("tables").child("rocketmade").child("players").child(player.name!).child("points").setValue(player.points)
+            ref.child("tables").child("rocketmade").child("players").child(player.name!).child("points").setValue(points[index])
 
             ref.child("tables").child("rocketmade").child("players").child(player.name!).child("games").setValue(player.games + 1)
 
