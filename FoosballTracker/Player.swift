@@ -21,6 +21,7 @@ class Player: NSObject {
     var totalWins: Int = 0
     var losses: Int = 0
     var tempPosition: Int = 1
+    var image: UIImage?
 
     class func initWithJson(json: NSDictionary) -> Player {
         let player = Player()

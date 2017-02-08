@@ -36,8 +36,6 @@ class NewGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let value = UIInterfaceOrientation.landscapeLeft.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
 
         APIClient.sharedInstance.getPlayers(success: { (players) in
             self.playerNames = []

@@ -13,6 +13,7 @@
 		A35ECD351E48E3A2002E6746 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35ECD341E48E3A2002E6746 /* Player.swift */; };
 		A35ECD371E48F68F002E6746 /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35ECD361E48F68F002E6746 /* PlayerDetailViewController.swift */; };
 		A35ECD391E48FD58002E6746 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35ECD381E48FD58002E6746 /* GameViewController.swift */; };
+		A35EF1311E4BE47C005ED62D /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35EF1301E4BE47C005ED62D /* MatchesViewController.swift */; };
 		A377F4F71DC941DF00907CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F4F61DC941DF00907CB3 /* AppDelegate.swift */; };
 		A377F4F91DC941DF00907CB3 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F4F81DC941DF00907CB3 /* NewGameViewController.swift */; };
 		A377F4FB1DC941DF00907CB3 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F4FA1DC941DF00907CB3 /* PlayersViewController.swift */; };
@@ -29,6 +30,10 @@
 		A377F51F1DC946DC00907CB3 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F5171DC946DC00907CB3 /* DropDownCell.swift */; };
 		A377F5221DC9545000907CB3 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F5201DC9545000907CB3 /* PlayerTableViewCell.swift */; };
 		A377F5231DC9545000907CB3 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A377F5211DC9545000907CB3 /* PlayerTableViewCell.xib */; };
+		A37C60E01E4B90470080E312 /* PlayersEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C60DF1E4B90470080E312 /* PlayersEmptyStateView.swift */; };
+		A37C60E21E4B90540080E312 /* PlayersEmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37C60E11E4B90540080E312 /* PlayersEmptyStateView.xib */; };
+		A37C60E41E4B9C610080E312 /* NewPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C60E31E4B9C610080E312 /* NewPlayerViewController.swift */; };
+		A37C60E71E4BAAEB0080E312 /* UIColor+FoosballTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C60E61E4BAAEB0080E312 /* UIColor+FoosballTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,7 @@
 		A35ECD341E48E3A2002E6746 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A35ECD361E48F68F002E6746 /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
 		A35ECD381E48FD58002E6746 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A35EF1301E4BE47C005ED62D /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		A377F4F31DC941DF00907CB3 /* FoosballTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoosballTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A377F4F61DC941DF00907CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A377F4F81DC941DF00907CB3 /* NewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,10 @@
 		A377F5171DC946DC00907CB3 /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		A377F5201DC9545000907CB3 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		A377F5211DC9545000907CB3 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
+		A37C60DF1E4B90470080E312 /* PlayersEmptyStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersEmptyStateView.swift; sourceTree = "<group>"; };
+		A37C60E11E4B90540080E312 /* PlayersEmptyStateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayersEmptyStateView.xib; sourceTree = "<group>"; };
+		A37C60E31E4B9C610080E312 /* NewPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlayerViewController.swift; sourceTree = "<group>"; };
+		A37C60E61E4BAAEB0080E312 /* UIColor+FoosballTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FoosballTracker.swift"; sourceTree = "<group>"; };
 		B3F9798B982C9BC6AA01C625 /* Pods-FoosballTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoosballTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoosballTracker/Pods-FoosballTracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,21 +113,18 @@
 		A377F4F51DC941DF00907CB3 /* FoosballTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A37C60E51E4BAA6F0080E312 /* Extensions */,
+				A377F4F61DC941DF00907CB3 /* AppDelegate.swift */,
+				A35ECD321E48E08C002E6746 /* APIClient.swift */,
+				A37C60DE1E4B8FF90080E312 /* Models */,
+				A37C60DD1E4B8FE10080E312 /* ViewControllers */,
+				A37C60DC1E4B8FDC0080E312 /* Views */,
 				A377F50A1DC946C900907CB3 /* Vendor */,
 				A35ECD301E48D95E002E6746 /* GoogleService-Info.plist */,
-				A377F4F61DC941DF00907CB3 /* AppDelegate.swift */,
-				A377F4F81DC941DF00907CB3 /* NewGameViewController.swift */,
-				A377F4FA1DC941DF00907CB3 /* PlayersViewController.swift */,
 				A377F4FC1DC941DF00907CB3 /* Main.storyboard */,
-				A377F4FF1DC941DF00907CB3 /* Assets.xcassets */,
 				A377F5011DC941DF00907CB3 /* LaunchScreen.storyboard */,
+				A377F4FF1DC941DF00907CB3 /* Assets.xcassets */,
 				A377F5041DC941DF00907CB3 /* Info.plist */,
-				A377F5201DC9545000907CB3 /* PlayerTableViewCell.swift */,
-				A377F5211DC9545000907CB3 /* PlayerTableViewCell.xib */,
-				A35ECD321E48E08C002E6746 /* APIClient.swift */,
-				A35ECD341E48E3A2002E6746 /* Player.swift */,
-				A35ECD361E48F68F002E6746 /* PlayerDetailViewController.swift */,
-				A35ECD381E48FD58002E6746 /* GameViewController.swift */,
 			);
 			path = FoosballTracker;
 			sourceTree = "<group>";
@@ -168,6 +175,46 @@
 				A377F5171DC946DC00907CB3 /* DropDownCell.swift */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		A37C60DC1E4B8FDC0080E312 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A377F5201DC9545000907CB3 /* PlayerTableViewCell.swift */,
+				A377F5211DC9545000907CB3 /* PlayerTableViewCell.xib */,
+				A37C60DF1E4B90470080E312 /* PlayersEmptyStateView.swift */,
+				A37C60E11E4B90540080E312 /* PlayersEmptyStateView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A37C60DD1E4B8FE10080E312 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A35ECD361E48F68F002E6746 /* PlayerDetailViewController.swift */,
+				A35ECD381E48FD58002E6746 /* GameViewController.swift */,
+				A377F4F81DC941DF00907CB3 /* NewGameViewController.swift */,
+				A377F4FA1DC941DF00907CB3 /* PlayersViewController.swift */,
+				A37C60E31E4B9C610080E312 /* NewPlayerViewController.swift */,
+				A35EF1301E4BE47C005ED62D /* MatchesViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A37C60DE1E4B8FF90080E312 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A35ECD341E48E3A2002E6746 /* Player.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A37C60E51E4BAA6F0080E312 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A37C60E61E4BAAEB0080E312 /* UIColor+FoosballTracker.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		AAA8C6165095E29535465D04 /* Frameworks */ = {
@@ -246,6 +293,7 @@
 				A377F5231DC9545000907CB3 /* PlayerTableViewCell.xib in Resources */,
 				A35ECD311E48D95E002E6746 /* GoogleService-Info.plist in Resources */,
 				A377F5001DC941DF00907CB3 /* Assets.xcassets in Resources */,
+				A37C60E21E4B90540080E312 /* PlayersEmptyStateView.xib in Resources */,
 				A377F51C1DC946DC00907CB3 /* DropDownCell.xib in Resources */,
 				A377F4FE1DC941DF00907CB3 /* Main.storyboard in Resources */,
 			);
@@ -317,8 +365,12 @@
 				A377F51F1DC946DC00907CB3 /* DropDownCell.swift in Sources */,
 				A377F51A1DC946DC00907CB3 /* DPDUIView+Extension.swift in Sources */,
 				A377F5191DC946DC00907CB3 /* DPDKeyboardListener.swift in Sources */,
+				A37C60E01E4B90470080E312 /* PlayersEmptyStateView.swift in Sources */,
+				A35EF1311E4BE47C005ED62D /* MatchesViewController.swift in Sources */,
+				A37C60E71E4BAAEB0080E312 /* UIColor+FoosballTracker.swift in Sources */,
 				A35ECD371E48F68F002E6746 /* PlayerDetailViewController.swift in Sources */,
 				A377F51E1DC946DC00907CB3 /* DropDown.swift in Sources */,
+				A37C60E41E4B9C610080E312 /* NewPlayerViewController.swift in Sources */,
 				A377F4F91DC941DF00907CB3 /* NewGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,12 +497,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NE2625R7RX;
 				INFOPLIST_FILE = FoosballTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "\"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codymace.Foosball-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -461,12 +514,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NE2625R7RX;
 				INFOPLIST_FILE = FoosballTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codymace.Foosball-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

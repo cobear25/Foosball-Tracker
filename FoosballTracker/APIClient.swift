@@ -52,6 +52,9 @@ class APIClient {
                 }
                 self.players = players
                 success(players)
+            } else {
+                let error = NSError(domain: "Failure", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to fetch players"])
+                failure(error)
             }
         }) { (error) in
             failure(error)
@@ -66,8 +69,12 @@ class APIClient {
         }
     }
 
+    func deletePlayer(name: String) {
+        ref.child("tables").child(table).child("players").child(name).removeValue()
+    }
+
     func finishGame(players: [Player], winner: String) {
-        for (index, player) in players.enumerated() {
+        for (_, player) in players.enumerated() {
             var pos = ""
             var wins = 0
             switch player.tempPosition {

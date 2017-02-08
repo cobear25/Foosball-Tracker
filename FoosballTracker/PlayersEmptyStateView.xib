@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlayersEmptyStateView" customModule="FoosballTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-players" translatesAutoresizingMaskIntoConstraints="NO" id="D7h-Yp-IWu">
+                    <rect key="frame" x="145" y="198" width="84" height="97"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="84" id="Rqy-N7-045"/>
+                        <constraint firstAttribute="height" constant="97" id="XoS-2L-F1F"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PA-zS-5mW">
+                    <rect key="frame" x="62.5" y="319" width="250" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="0Jh-ce-q8e"/>
+                        <constraint firstAttribute="width" constant="250" id="NNk-4B-6gl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create players to join matches and track stats" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7S-3w-HZj">
+                    <rect key="frame" x="62" y="362" width="250" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="k1X-fj-PoQ"/>
+                        <constraint firstAttribute="width" constant="250" id="z2W-RG-qPY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsU-ex-IOk">
+                    <rect key="frame" x="62" y="445" width="250" height="44"/>
+                    <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="gOF-ax-HzX"/>
+                        <constraint firstAttribute="width" constant="250" id="tzA-dL-jF2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <state key="normal" title="Create A Player">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3PA-zS-5mW" firstAttribute="top" secondItem="D7h-Yp-IWu" secondAttribute="bottom" constant="24" id="0BA-SQ-XPV"/>
+                <constraint firstItem="3PA-zS-5mW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="83Y-LW-XOx"/>
+                <constraint firstItem="NsU-ex-IOk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ARW-3B-WmS"/>
+                <constraint firstItem="z7S-3w-HZj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="F8c-QQ-dIJ"/>
+                <constraint firstItem="D7h-Yp-IWu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JOg-av-iLu"/>
+                <constraint firstItem="NsU-ex-IOk" firstAttribute="top" secondItem="z7S-3w-HZj" secondAttribute="bottom" constant="43" id="SSG-tp-Tbj"/>
+                <constraint firstItem="3PA-zS-5mW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="afL-H5-DcN"/>
+                <constraint firstItem="z7S-3w-HZj" firstAttribute="top" secondItem="3PA-zS-5mW" secondAttribute="bottom" constant="14" id="xZD-c5-eds"/>
+            </constraints>
+            <connections>
+                <outlet property="button" destination="NsU-ex-IOk" id="T8m-hA-fA2"/>
+                <outlet property="detailLabel" destination="z7S-3w-HZj" id="i5D-j2-AKl"/>
+                <outlet property="mainLabel" destination="3PA-zS-5mW" id="3d9-Nh-z20"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="empty-players" width="84" height="97"/>
+    </resources>
+</document>
