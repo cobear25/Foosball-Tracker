@@ -11,13 +11,12 @@ import UIKit
 class PlayersViewController: UIViewController {
     @IBOutlet weak var newPlayerButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var backButton: UIButton!
 
     var players: [Player] = []
     var refreshControl = UIRefreshControl()
-
-//    override var preferredStatusBarStyle: UIStatusBarStyle {
-//        return .lightContent
-//    }
+    var addToMatch = false
+    var selectedPlayerDelegate: SelectedPlayerDelegate? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +26,7 @@ class PlayersViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib.init(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableView.tableFooterView = UIView()
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
         APIClient.sharedInstance.getPlayers(success: { (players) in
             self.players = players
@@ -43,10 +43,25 @@ class PlayersViewController: UIViewController {
         let view: PlayersEmptyStateView = PlayersEmptyStateView.fromNib()
         view.button.addTarget(self, action: #selector(self.newPlayerButtonTapped(_:)), for: .touchUpInside)
         tableView.backgroundView = view
+        tableView.backgroundView?.isHidden = true
 
         refreshControl.attributedTitle = NSAttributedString(string: "")
         refreshControl.addTarget(self, action: #selector(self.getPlayers), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
+
+        self.navigationController?.isNavigationBarHidden = true
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        if addToMatch {
+            var frame = tableView.frame
+            frame.origin.y += 20
+            tableView.frame = frame
+
+            backButton.isHidden = false
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -84,37 +99,17 @@ class PlayersViewController: UIViewController {
     @IBAction func newPlayerButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "NewPlayerViewController") as! NewPlayerViewController
+        vc.addToMatch = self.addToMatch
         show(vc, sender: self)
-//        let alert = UIAlertController(title: "Please enter player's name", message: nil,preferredStyle: UIAlertControllerStyle.alert)
-//        alert.addTextField(configurationHandler: { (textField) in
-//            textField.placeholder = "Player name"
-//            textField.addTarget(self, action: #selector(self.textChanged), for: .editingChanged)
-//        })
-//        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { (_) in
-//            if let tf = alert.textFields?.first {
-//                if let name = tf.text {
-//                    if !name.isEmpty {
-//                        APIClient.sharedInstance.createPlayer(name: name, success: { (done) in
-//                            self.players = APIClient.sharedInstance.players
-//                            if self.players.count > 0 {
-//                                self.tableView.backgroundView?.isHidden = true
-//                            } else {
-//                                self.tableView.backgroundView?.isHidden = false
-//                            }
-//                            self.tableView.reloadData()
-//                        })
-//                    }
-//                }
-//            }
-//        })
-//        alert.addAction(saveAction)
-//        self.present(alert, animated: true, completion:nil)
     }
-    
+
     func textChanged(sender:UITextField) {
         // add member
     }
 
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -147,15 +142,16 @@ extension PlayersViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let player = players[indexPath.row]
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PlayerDetailViewController") as! PlayerDetailViewController
-        vc.player = player
-        let transition = CATransition()
-        transition.duration = 0.4
-        transition.type = kCATransitionPush
-        transition.subtype = kCATransitionFromRight
-        view.window!.layer.add(transition, forKey: kCATransition)
-        present(vc, animated: false, completion: nil)
+        if addToMatch && selectedPlayerDelegate != nil {
+            selectedPlayerDelegate?.playerSelected(player: player)
+            dismiss(animated: true, completion: nil)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "PlayerDetailViewController") as! PlayerDetailViewController
+            vc.player = player
+            vc.addToMatch = self.addToMatch
+            self.show(vc, sender: self)
+        }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -186,6 +182,10 @@ extension PlayersViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+}
+
+protocol SelectedPlayerDelegate: class {
+    func playerSelected(player: Player)
 }
 
 public extension UIView {

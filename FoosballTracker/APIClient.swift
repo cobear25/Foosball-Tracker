@@ -22,6 +22,7 @@ class APIClient {
     #endif
 
     var players: [Player] = []
+    var matches: [Match] = []
 
     init() {
         ref = FIRDatabase.database().reference()
@@ -66,6 +67,46 @@ class APIClient {
         getPlayers(success: { (players) in
             success(true)
         }) { (err) in
+        }
+    }
+    
+    func createMatch(match: Match, success: @escaping(Bool) -> Void) {
+        ref.child("tables").child(table).child("matches").child(match.matchName).setValue(["redDefense": match.redDefense, "redOffense": match.redOffense, "blackDefense": match.blackDefense, "blackOffense": match.blackOffense, "redScore": match.redScore, "blackScore": match.blackScore, "playerCount": match.playerCount, "date": match.date])
+        success(true)
+    }
+
+    func updateMatch(match: Match) {
+        ref.child("tables").child(table).child("matches").child(match.matchName).child("redScore").setValue(match.redScore)
+        ref.child("tables").child(table).child("matches").child(match.matchName).child("blackScore").setValue(match.blackScore)
+    }
+
+    func getMatches(success: @escaping ([Match]) -> Void, failure: @escaping (Error) -> Void) {
+        ref.child("tables").child(table).child("matches").observe(FIRDataEventType.value, with: { (snapshot) in
+            if let value = snapshot.value as? NSDictionary {
+                var matches: [Match] = []
+                for (key, val) in value {
+                    let matchName = key as! String
+                    let matchDict = val as! NSDictionary
+                    let redDefense = matchDict["redDefense"] as? [String] ?? []
+                    let redOffense = matchDict["redOffense"] as? [String] ?? []
+                    let blackDefense = matchDict["blackDefense"] as? [String] ?? []
+                    let blackOffense = matchDict["blackOffense"] as? [String] ?? []
+                    let redScore = matchDict["redScore"] as? Int ?? 0
+                    let blackScore = matchDict["blackScore"] as? Int ?? 0
+                    let playerCount = matchDict["playerCount"] as? Int ?? 0
+                    let date = matchDict["date"] as? String ?? ""
+                    let matchDictionary: NSDictionary = ["matchName": matchName, "redDefense": redDefense, "redOffense": redOffense, "blackDefense": blackDefense, "blackOffense": blackOffense, "redScore": redScore, "blackScore": blackScore, "playerCount": playerCount, "date": date]
+                    let match = Match.initWithJson(json: matchDictionary)
+                    matches.append(match)
+                }
+                self.matches = matches
+                success(matches)
+            } else {
+                let error = NSError(domain: "Failure", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to fetch matches"])
+                failure(error)
+            }
+        }) { (error) in
+            failure(error)
         }
     }
 

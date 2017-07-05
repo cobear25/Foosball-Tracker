@@ -31,6 +31,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var redLabel: UILabel!
     @IBOutlet var buttons: [UIButton]!
 
+    var match: Match = Match()
     var redScore = 0
     var blackScore = 0
     var r1Points = 0
@@ -54,9 +55,16 @@ class GameViewController: UIViewController {
 
     var players: [Player] = []
     var positions: [Int] = []
+    var redDefPlayers: [Player] = []
+    var redOffPlayers: [Player] = []
+    var blackDefPlayers: [Player] = []
+    var blackOffPlayers: [Player] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        UIApplication.shared.isIdleTimerDisabled = true
+
         if let r1 = p1Red {
             red1Button.isHidden = false
             red1Label.isHidden = false
@@ -178,10 +186,14 @@ class GameViewController: UIViewController {
         black2Label.text = "\(b2Points)"
         black3Label.text = "\(b3Points)"
         black4Label.text = "\(b4Points)"
+
+        match.blackScore = blackScore
+        match.redScore = redScore
+        APIClient.sharedInstance.updateMatch(match: match)
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        let _ = self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func finishButtonTapped(_ sender: Any) {

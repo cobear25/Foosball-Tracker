@@ -14,6 +14,15 @@
 		A35ECD371E48F68F002E6746 /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35ECD361E48F68F002E6746 /* PlayerDetailViewController.swift */; };
 		A35ECD391E48FD58002E6746 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35ECD381E48FD58002E6746 /* GameViewController.swift */; };
 		A35EF1311E4BE47C005ED62D /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35EF1301E4BE47C005ED62D /* MatchesViewController.swift */; };
+		A35EF1331E4CEA95005ED62D /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35EF1321E4CEA95005ED62D /* Match.swift */; };
+		A35EF1361E4CF23D005ED62D /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35EF1341E4CF23D005ED62D /* MatchTableViewCell.swift */; };
+		A35EF1371E4CF23D005ED62D /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35EF1351E4CF23D005ED62D /* MatchTableViewCell.xib */; };
+		A35EF1391E4E1D0E005ED62D /* NewMatchViewController-phone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35EF1381E4E1D0E005ED62D /* NewMatchViewController-phone.xib */; };
+		A35EF1421E4E20F0005ED62D /* NewMatchViewController-pad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35EF1411E4E20F0005ED62D /* NewMatchViewController-pad.xib */; };
+		A35EF1451E4E583B005ED62D /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35EF1431E4E583B005ED62D /* GameTableViewCell.swift */; };
+		A35EF1461E4E583B005ED62D /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35EF1441E4E583B005ED62D /* GameTableViewCell.xib */; };
+		A35EF1481E520A94005ED62D /* MatchViewController-phone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35EF1471E520A94005ED62D /* MatchViewController-phone.xib */; };
+		A35EF14A1E520D0F005ED62D /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35EF1491E520D0F005ED62D /* MatchViewController.swift */; };
 		A377F4F71DC941DF00907CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F4F61DC941DF00907CB3 /* AppDelegate.swift */; };
 		A377F4F91DC941DF00907CB3 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F4F81DC941DF00907CB3 /* NewGameViewController.swift */; };
 		A377F4FB1DC941DF00907CB3 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377F4FA1DC941DF00907CB3 /* PlayersViewController.swift */; };
@@ -45,6 +54,15 @@
 		A35ECD361E48F68F002E6746 /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
 		A35ECD381E48FD58002E6746 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A35EF1301E4BE47C005ED62D /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		A35EF1321E4CEA95005ED62D /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		A35EF1341E4CF23D005ED62D /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		A35EF1351E4CF23D005ED62D /* MatchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
+		A35EF1381E4E1D0E005ED62D /* NewMatchViewController-phone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NewMatchViewController-phone.xib"; sourceTree = "<group>"; };
+		A35EF1411E4E20F0005ED62D /* NewMatchViewController-pad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NewMatchViewController-pad.xib"; sourceTree = "<group>"; };
+		A35EF1431E4E583B005ED62D /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		A35EF1441E4E583B005ED62D /* GameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
+		A35EF1471E520A94005ED62D /* MatchViewController-phone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MatchViewController-phone.xib"; sourceTree = "<group>"; };
+		A35EF1491E520D0F005ED62D /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		A377F4F31DC941DF00907CB3 /* FoosballTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoosballTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A377F4F61DC941DF00907CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A377F4F81DC941DF00907CB3 /* NewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +202,10 @@
 				A377F5211DC9545000907CB3 /* PlayerTableViewCell.xib */,
 				A37C60DF1E4B90470080E312 /* PlayersEmptyStateView.swift */,
 				A37C60E11E4B90540080E312 /* PlayersEmptyStateView.xib */,
+				A35EF1341E4CF23D005ED62D /* MatchTableViewCell.swift */,
+				A35EF1351E4CF23D005ED62D /* MatchTableViewCell.xib */,
+				A35EF1431E4E583B005ED62D /* GameTableViewCell.swift */,
+				A35EF1441E4E583B005ED62D /* GameTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -191,12 +213,16 @@
 		A37C60DD1E4B8FE10080E312 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A35EF1471E520A94005ED62D /* MatchViewController-phone.xib */,
 				A35ECD361E48F68F002E6746 /* PlayerDetailViewController.swift */,
 				A35ECD381E48FD58002E6746 /* GameViewController.swift */,
 				A377F4F81DC941DF00907CB3 /* NewGameViewController.swift */,
 				A377F4FA1DC941DF00907CB3 /* PlayersViewController.swift */,
 				A37C60E31E4B9C610080E312 /* NewPlayerViewController.swift */,
 				A35EF1301E4BE47C005ED62D /* MatchesViewController.swift */,
+				A35EF1381E4E1D0E005ED62D /* NewMatchViewController-phone.xib */,
+				A35EF1411E4E20F0005ED62D /* NewMatchViewController-pad.xib */,
+				A35EF1491E520D0F005ED62D /* MatchViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -205,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				A35ECD341E48E3A2002E6746 /* Player.swift */,
+				A35EF1321E4CEA95005ED62D /* Match.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -290,12 +317,17 @@
 			files = (
 				A377F51B1DC946DC00907CB3 /* Info.plist in Resources */,
 				A377F5031DC941DF00907CB3 /* LaunchScreen.storyboard in Resources */,
+				A35EF1391E4E1D0E005ED62D /* NewMatchViewController-phone.xib in Resources */,
+				A35EF1371E4CF23D005ED62D /* MatchTableViewCell.xib in Resources */,
 				A377F5231DC9545000907CB3 /* PlayerTableViewCell.xib in Resources */,
 				A35ECD311E48D95E002E6746 /* GoogleService-Info.plist in Resources */,
+				A35EF1421E4E20F0005ED62D /* NewMatchViewController-pad.xib in Resources */,
+				A35EF1481E520A94005ED62D /* MatchViewController-phone.xib in Resources */,
 				A377F5001DC941DF00907CB3 /* Assets.xcassets in Resources */,
 				A37C60E21E4B90540080E312 /* PlayersEmptyStateView.xib in Resources */,
 				A377F51C1DC946DC00907CB3 /* DropDownCell.xib in Resources */,
 				A377F4FE1DC941DF00907CB3 /* Main.storyboard in Resources */,
+				A35EF1461E4E583B005ED62D /* GameTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +361,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FC4281A2AFBD51C8FA9DEDBE /* [CP] Copy Pods Resources */ = {
@@ -361,14 +393,18 @@
 				A377F5181DC946DC00907CB3 /* DPDConstants.swift in Sources */,
 				A35ECD351E48E3A2002E6746 /* Player.swift in Sources */,
 				A377F51D1DC946DC00907CB3 /* DropDown+Appearance.swift in Sources */,
+				A35EF1361E4CF23D005ED62D /* MatchTableViewCell.swift in Sources */,
 				A35ECD331E48E08C002E6746 /* APIClient.swift in Sources */,
+				A35EF1331E4CEA95005ED62D /* Match.swift in Sources */,
 				A377F51F1DC946DC00907CB3 /* DropDownCell.swift in Sources */,
 				A377F51A1DC946DC00907CB3 /* DPDUIView+Extension.swift in Sources */,
 				A377F5191DC946DC00907CB3 /* DPDKeyboardListener.swift in Sources */,
 				A37C60E01E4B90470080E312 /* PlayersEmptyStateView.swift in Sources */,
+				A35EF1451E4E583B005ED62D /* GameTableViewCell.swift in Sources */,
 				A35EF1311E4BE47C005ED62D /* MatchesViewController.swift in Sources */,
 				A37C60E71E4BAAEB0080E312 /* UIColor+FoosballTracker.swift in Sources */,
 				A35ECD371E48F68F002E6746 /* PlayerDetailViewController.swift in Sources */,
+				A35EF14A1E520D0F005ED62D /* MatchViewController.swift in Sources */,
 				A377F51E1DC946DC00907CB3 /* DropDown.swift in Sources */,
 				A37C60E41E4B9C610080E312 /* NewPlayerViewController.swift in Sources */,
 				A377F4F91DC941DF00907CB3 /* NewGameViewController.swift in Sources */,
@@ -500,7 +536,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "\"-DDEBUG\"";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codymace.Foosball-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codymace.FoosballTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -517,7 +553,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codymace.Foosball-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codymace.FoosballTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

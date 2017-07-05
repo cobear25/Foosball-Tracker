@@ -15,6 +15,9 @@ class NewPlayerViewController: UIViewController {
     @IBOutlet weak var createPlayerButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var cameraButton: UIButton!
+
+    var addToMatch = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,8 +40,8 @@ class NewPlayerViewController: UIViewController {
         if self.view.bounds.height <= 480 {
             UIView.animate(withDuration: 0.3, animations: {
                 self.topLabel.transform = CGAffineTransform(translationX: 0, y: -47)
-                self.nameTextField.transform = CGAffineTransform(translationX: 0, y: -167)
-                self.lineView.transform = CGAffineTransform(translationX: 0, y: -170)
+                self.nameTextField.transform = CGAffineTransform(translationX: 0, y: -117)
+                self.lineView.transform = CGAffineTransform(translationX: 0, y: -120)
                 self.cameraButton.transform = CGAffineTransform(translationX: 0, y: -95)
             })
         } else if self.view.bounds.height <= 568 || UIDevice.current.userInterfaceIdiom == .pad {
@@ -116,7 +119,11 @@ class NewPlayerViewController: UIViewController {
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if addToMatch {
+            dismiss(animated: true, completion: nil)
+        } else {
+            let _ = self.navigationController?.popViewController(animated: true)
+        }
     }
 }
 
@@ -133,7 +140,7 @@ extension NewPlayerViewController: UIImagePickerControllerDelegate, UINavigation
 }
 
 
-enum UIUserInterfaceIdiom : Int {
+public enum UIUserInterfaceIdiom : Int {
     case unspecified
 
     case phone // iPhone and iPod touch style UI

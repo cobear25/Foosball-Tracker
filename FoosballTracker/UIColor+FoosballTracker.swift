@@ -12,8 +12,17 @@ extension UIColor {
     class var appBlue: UIColor {
         return UIColor.hexColor(0x2196f3)
     }
+    
     class var appBlueDisabled: UIColor {
         return UIColor.hexColor(0x8AC4F3)
+    }
+    
+    class var appBlack: UIColor {
+        return UIColor.hexColor(0x212121)
+    }
+
+    class var appRed: UIColor {
+        return UIColor.hexColor(0xe53935)
     }
 
     public class func RGBColor(_ red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) -> UIColor {
